@@ -1,0 +1,60 @@
+[
+  {
+    "id": 1,
+    "name": "Admin",
+    "permissions": [
+      { "id": 1, "name": "read" },
+      { "id": 2, "name": "write" },
+      { "id": 3, "name": "delete" },
+      { "id": 4, "name": "update" },
+      { "id": 5, "name": "manage users" },
+      { "id": 6, "name": "view reports" },
+      { "id": 7, "name": "approve content" }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Editor",
+    "permissions": [
+      { "id": 1, "name": "read" },
+      { "id": 2, "name": "write" },
+      { "id": 4, "name": "update" },
+      { "id": 7, "name": "approve content" }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Viewer",
+    "permissions": [
+      { "id": 1, "name": "read" },
+      { "id": 6, "name": "view reports" }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Manager",
+    "permissions": [
+      { "id": 1, "name": "read" },
+      { "id": 2, "name": "write" },
+      { "id": 4, "name": "update" },
+      { "id": 5, "name": "manage users" }
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Guest",
+    "permissions": [
+      { "id": 1, "name": "read" },
+      { "id": 6, "name": "view reports" }
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Content Creator",
+    "permissions": [
+      { "id": 1, "name": "read" },
+      { "id": 2, "name": "write" },
+      { "id": 7, "name": "approve content" }
+    ]
+  }
+]

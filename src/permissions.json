@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "name": "read"
+  },
+  {
+    "id": 2,
+    "name": "write"
+  },
+  {
+    "id": 3,
+    "name": "delete"
+  },
+  {
+    "id": 4,
+    "name": "update"
+  },
+  {
+    "id": 5,
+    "name": "manage users"
+  },
+  {
+    "id": 6,
+    "name": "view reports"
+  },
+  {
+    "id": 7,
+    "name": "approve content"
+  }
+]
