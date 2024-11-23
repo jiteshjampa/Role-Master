@@ -7,13 +7,16 @@ import { RiDeleteBin5Fill } from "react-icons/ri";
 import { IoIosAddCircle } from "react-icons/io";
 import { GiPreviousButton } from "react-icons/gi";
 import { GiNextButton } from "react-icons/gi";
+import { TiArrowUnsorted } from "react-icons/ti";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const User = () => {
   const [users, setUsers] = useState([]);
   const [roles, setRoles] = useState([]);
   const [permissions, setPermissions] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
-  const [usersPerPage, setusersperpage] = useState(8);
+  const [usersPerPage, setusersperpage] = useState(7);
   const [searchTerm, setSearchTerm] = useState("");
   const [sortKey, setSortKey] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -53,10 +56,12 @@ const User = () => {
       );
       setUsers(updatedUsers);
       localStorage.setItem("users", JSON.stringify(updatedUsers));
+      toast.success("User updated successfully!");
     } else {
       const newUser = { ...user, id: Date.now() };
       setUsers([...users, newUser]);
       localStorage.setItem("users", JSON.stringify([...users, newUser]));
+      toast.success("User added successfully!");
     }
     setIsModalOpen(false);
     setCurrentUser(null);
@@ -66,6 +71,7 @@ const User = () => {
     const updatedUsers = users.filter((user) => user.id !== id);
     localStorage.setItem("users", JSON.stringify(updatedUsers));
     setUsers(updatedUsers);
+    toast.error("User deleted successfully!");
   };
 
   const handleSort = (key) => {
@@ -120,7 +126,8 @@ const User = () => {
   };
 
   return (
-    <div className="container mx-auto p-4">
+    <div className="container mx-auto p-4 overflow-x-hidden">
+      <ToastContainer />
       <h1 className="text-2xl font-bold mb-4">User Management</h1>
       <div className="flex mb-4">
         <input
@@ -154,7 +161,8 @@ const User = () => {
                       ? sortKey.direction === "asc"
                         ? " 🔼"
                         : " 🔽"
-                      : null}
+                      : null}{" "}
+                    <TiArrowUnsorted className="w-5 h-5 " />
                   </button>
                 </th>
               ))}

@@ -6,7 +6,7 @@ export default {
       fontFamily: { poppins: ["Poppins", "sans-serif"] },
       screens: {
         resp: { min: "320px", max: "768px" },
-        mobile: { max: "340px" },
+        mobile: { max: "420px" },
       },
     },
   },
