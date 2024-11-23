@@ -44,7 +44,7 @@ Here're some of the project's best features:
 git clone https://github.com/your-username/rolemaster.git
 ```
 
-<p>2. git clone https://github.com/your-username/rolemaster.git</p>
+<p>2 Go to Directory</p>
 
 ```
 cd rolemaster
